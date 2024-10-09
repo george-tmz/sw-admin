@@ -11,7 +11,9 @@ class TicketReceiveController extends Controller
     public function receive(Request $request): void
     {
         $data = $request->all();
+        $body = $request->getContent();
         Log::info(json_encode($data));
+        Log::info($body);
         echo 'success';
     }
 }
